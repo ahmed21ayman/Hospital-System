@@ -29,11 +29,14 @@ public class App {
         }
         @Override
         void showInfo(){
-            System.out.println("Doctor: " + name + " -age: " + age + " -disease: "+ disease);
+            System.out.println("Patient: " + name + " -age: " + age + " -disease: "+ disease);
         }
     }
 
     public static void main(String[] args) throws Exception {
-        System.out.println("Hello, World!");
+        Doctor d1 = new Doctor("ahmed Ayman", 23, "any");
+        Patient p1 = new Patient("mahmoud eldb3", 28, "heart");
+        p1.showInfo();
+        d1.showInfo();
     }
 }
