@@ -8,7 +8,20 @@ public class App {
         }
         abstract void showInfo();
     }
-    
+
+    static class Doctor extends Person{
+        private String Specialization;
+        Doctor(String name, int age, String Specialization){
+            super(name, age);
+            this.Specialization = Specialization;
+        }
+
+        @Override
+        void showInfo(){
+            System.out.println("Doctor: " + name + " -age: " + age + " -Specialization: "+ Specialization);
+        }
+    }
+
     public static void main(String[] args) throws Exception {
         System.out.println("Hello, World!");
     }
