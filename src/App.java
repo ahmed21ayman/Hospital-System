@@ -15,10 +15,21 @@ public class App {
             super(name, age);
             this.Specialization = Specialization;
         }
-
         @Override
         void showInfo(){
             System.out.println("Doctor: " + name + " -age: " + age + " -Specialization: "+ Specialization);
+        }
+    }
+
+    static class Patient extends Person{
+        private String disease;
+        Patient(String name, int age, String disease){
+            super(name, age);
+            this.disease = disease;
+        }
+        @Override
+        void showInfo(){
+            System.out.println("Doctor: " + name + " -age: " + age + " -disease: "+ disease);
         }
     }
 
